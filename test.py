@@ -7,13 +7,7 @@ password = "",
 database="testdb"
 )
 mycursor = mydb.cursor()
-sqlFormula = "insert into students (name , age )values (%s, %s)"
-
-students = [("lamken" , 22),
-                ("puffy", 24),
-                ("Jacob", 12),
-                ("Randomgee", 25),
-                ("Yvonne", 20)]
-
-mycursor.execute(sqlFormula, students);
-mydb.commit();
+mycursor.execute('select * from students where age=23')
+myresult = mycursor.fetchall()
+for row in myresult:
+    print(row)
