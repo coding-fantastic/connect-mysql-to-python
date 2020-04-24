@@ -7,7 +7,7 @@ password = '',
 database="testdb"
 )
 mycursor = mydb.cursor()
-mycursor.execute("show databases")
+mycursor.execute("create table students (name varchar(255), age integer(10))")
 
 for db in mycursor:
     print(db)
