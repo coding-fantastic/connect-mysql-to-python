@@ -7,7 +7,7 @@ password = "",
 database="testdb"
 )
 mycursor = mydb.cursor()
-mycursor.execute('select * from students where age=23')
+mycursor.execute('select * from students where name like "%eff%"' )
 myresult = mycursor.fetchall()
 for row in myresult:
     print(row)
