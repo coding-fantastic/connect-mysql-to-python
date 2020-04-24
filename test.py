@@ -7,3 +7,7 @@ password = '',
 database="testdb"
 )
 mycursor = mydb.cursor()
+mycursor.execute("show databases")
+
+for db in mycursor:
+    print(db)
