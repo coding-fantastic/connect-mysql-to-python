@@ -2,11 +2,12 @@ from tkinter import *
 import mysql.connector
 
 root =Tk()
-#creating a label widget
-myLabel =Label(root, text="Hello World!")
 
-#shoving it onto the screen
-myLabel.pack(200)
+def myClick():
+    myLabel = Label(root, text="look! i clicked a  button")
+    myLabel.pack()
+myButton = Button(root, text="Click Me!", padx=50, pady=100, command = myClick)
+myButton.pack()
 
 #create an event loop
 root.mainloop()
