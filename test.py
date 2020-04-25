@@ -3,10 +3,15 @@ import mysql.connector
 
 root =Tk()
 
+e = Entry(root, width = 50)
+e.pack()
+e.insert(0, "Enter you name") #placeholder of textbox 
+
 def myClick():
-    myLabel = Label(root, text="look! i clicked a  button")
+    hello = "Hello " + e.get()
+    myLabel = Label(root, text=hello)
     myLabel.pack()
-myButton = Button(root, text="Click Me!", padx=50, pady=100, command = myClick)
+myButton = Button(root, text="Enter your name!", padx=20, pady=20, command = myClick)
 myButton.pack()
 
 #create an event loop
